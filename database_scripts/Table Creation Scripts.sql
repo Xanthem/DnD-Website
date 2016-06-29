@@ -16,6 +16,80 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `character_equipped`
+--
+
+DROP TABLE IF EXISTS `character_equipped`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `character_equipped` (
+  `char_id_FK` int(11) NOT NULL,
+  `equipped_head` varchar(45) DEFAULT NULL,
+  `equipped_chest` varchar(45) DEFAULT NULL,
+  `equipped_legs` varchar(45) DEFAULT NULL,
+  `equipped_feet` varchar(45) DEFAULT NULL,
+  `equipped_back` varchar(45) DEFAULT NULL,
+  `equipped_neck` varchar(45) DEFAULT NULL,
+  `equipped_finger` varchar(45) DEFAULT NULL,
+  `equipped_weapon_type` varchar(45) DEFAULT NULL,
+  `equipped_mainhand` varchar(45) DEFAULT NULL,
+  `equipped_offhand` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`char_id_FK`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `character_inventory`
+--
+
+DROP TABLE IF EXISTS `character_inventory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `character_inventory` (
+  `char_id_FK` int(11) NOT NULL,
+  PRIMARY KEY (`char_id_FK`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `character_spells`
+--
+
+DROP TABLE IF EXISTS `character_spells`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `character_spells` (
+  `char_id_FK` int(11) NOT NULL,
+  `char_spells` varchar(4096) DEFAULT NULL,
+  PRIMARY KEY (`char_id_FK`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `character_stats`
+--
+
+DROP TABLE IF EXISTS `character_stats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `character_stats` (
+  `char_id_FK` int(11) NOT NULL,
+  `char_alignment` varchar(45) NOT NULL DEFAULT 'neutral',
+  `char_speed` int(11) DEFAULT NULL,
+  `char_CHA` int(11) NOT NULL DEFAULT '0',
+  `char_STR` int(11) NOT NULL DEFAULT '0',
+  `char_CON` int(11) NOT NULL DEFAULT '0',
+  `char_INT` int(11) NOT NULL DEFAULT '0',
+  `char_WIS` int(11) NOT NULL DEFAULT '0',
+  `char_DEX` int(11) NOT NULL DEFAULT '0',
+  `char_perception` int(11) NOT NULL DEFAULT '0',
+  `char_proficiency` int(11) NOT NULL DEFAULT '1',
+  `char_AC` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`char_id_FK`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `characters`
 --
 
@@ -65,7 +139,7 @@ CREATE TABLE `characters` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-29  1:51:36
+-- Dump completed on 2016-06-29  2:01:06
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: user_db
@@ -108,7 +182,7 @@ CREATE TABLE `login_information` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-29  1:51:36
+-- Dump completed on 2016-06-29  2:01:07
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: gameplay_db
@@ -187,4 +261,4 @@ CREATE TABLE `spells` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-29  1:51:37
+-- Dump completed on 2016-06-29  2:01:07
