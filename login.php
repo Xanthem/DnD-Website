@@ -1,27 +1,18 @@
 <?php
+require_once("./config/basic_config.php");
 $DB_HOST = "127.0.0.1";
 $DB_NAME = "user_db";
 $DB_USER = "query";
 $DB_PASS = "D&D#DnD4Lyfe";
 
 $connect = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
-if ($connect->connect_errno) {
-    echo "Failed to connect to MySQL.";
-}
-
 
 ob_start();
-session_start();
-
-#echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-#echo "Host information: " . mysqli_get_host_info($connect) . PHP_EOL;
 ?>
 
 <html lang = "en">
 <head>
-    <title>Tutorialspoint.com</title>
     <link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css">
-
 </head>
 
 <body>
@@ -53,7 +44,7 @@ session_start();
 
             echo 'You have entered valid use name and password<br>';
             echo "You are now logged in as $username.";
-                header("Location: http://www.abc.com");
+                header("Location: ./frontEnd/");
 
         }else {
             $msg = 'Wrong username or password';
@@ -76,8 +67,6 @@ session_start();
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "login">Login</button>
     </form>
-
-    <h2>Click here to  <a href = "logout.php" tite = "Logout">Logout.</h2>
 </div>
 
 </body>

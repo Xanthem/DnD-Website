@@ -1,3 +1,7 @@
+<?php
+require_once("./config/basic_config.php");
+?>
+
 <html>
 <head>
     
