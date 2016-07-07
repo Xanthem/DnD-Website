@@ -135,6 +135,7 @@ DROP TABLE IF EXISTS `characters`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `characters` (
   `char_id` int(11) NOT NULL,
+  `char_owner` int(11) NOT NULL,
   `char_name` varchar(64) NOT NULL,
   `char_class` varchar(45) DEFAULT NULL,
   `char_race` varchar(45) NOT NULL,
@@ -161,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-07 13:10:21
+-- Dump completed on 2016-07-07 13:16:22
