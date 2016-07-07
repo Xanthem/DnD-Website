@@ -44,7 +44,7 @@ ob_start();
 
             echo 'You have entered valid use name and password<br>';
             echo "You are now logged in as $username.";
-                header("Location: ./frontEnd/");
+                header("Location: ./account/");
 
         }else {
             $msg = 'Wrong username or password';
