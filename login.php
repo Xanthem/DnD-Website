@@ -1,5 +1,5 @@
 <?php
-require_once("./config/basic_config.php");
+require_once "$_SERVER[DOCUMENT_ROOT]/config/basic_config.php";
 $DB_HOST = "127.0.0.1";
 $DB_NAME = "user_db";
 $DB_USER = "query";

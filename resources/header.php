@@ -5,6 +5,8 @@
 <body>
     <ul>
         <li><a href="/index.php">Home</a></li>
+        <li><a href="/frontEnd/character.php">Characters</a></li>
+
         <?php
         if (isset($_SESSION['valid']))
         { ?>
