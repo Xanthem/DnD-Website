@@ -1,5 +1,5 @@
 <?php
-require_once("./config/basic_config.php");
+require_once "$_SERVER[DOCUMENT_ROOT]/config/basic_config.php";
 unset($_SESSION["username"]);
 unset($_SESSION["password"]);
 unset($_SESSION['valid']);
