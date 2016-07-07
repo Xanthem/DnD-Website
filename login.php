@@ -53,20 +53,21 @@ ob_start();
     ?>
 </div> <!-- /container -->
 
-<div class = "container">
+<div class = "container" style="text-align:center;">
     <form class = "form-signin" role = "form"
           action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
           ?>" method = "post">
         <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-        <input type = "text" class = "form-control"
+        <input type = "username" class = "form-control"
                name = "username" placeholder = "username"
-               required autofocus></br>
+               required autofocus>
         <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required>
         <br>
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "login">Login</button>
     </form>
+    <h4>New user? <a href="/signup.php">Click here!</a></h4>
 </div>
 
 </body>

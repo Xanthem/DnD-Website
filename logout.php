@@ -4,6 +4,6 @@ unset($_SESSION["username"]);
 unset($_SESSION["password"]);
 unset($_SESSION['valid']);
 unset($_SESSION['timeout']);
-
-echo 'You have successfully logged out!';
-header('Refresh: 2; URL = login.php');
+?>
+<h2> <?php echo 'You have successfully logged out!'; ?> <h2>
+<?php header('Refresh: 2; URL = login.php'); ?>
