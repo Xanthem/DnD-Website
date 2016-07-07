@@ -5,15 +5,17 @@
 <body>
     <ul>
         <li><a href="/index.php">Home</a></li>
+        <li><a href="/account/">Account</a></li>
         <li><a href="/account/characters.php">Characters</a></li>
+
 
         <?php
         if (isset($_SESSION['valid']))
         { ?>
-            <li style="float:right"><a class="active" href="/logout.php">Logout</a></li>
+            <li style="float:right"><a href="/logout.php">Logout</a></li>
         <?php } else
         { ?>
-            <li style="float:right"><a class="active" href="/login.php">Login</a></li>
+            <li style="float:right"><a href="/login.php">Login</a></li>
         <?php } ?>
     </ul>
 
