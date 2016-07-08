@@ -1,5 +1,4 @@
 <?php
-
 $DB_HOST = "127.0.0.1";
 $DB_NAME = "gameplay_db";
 $DB_USER = "query";

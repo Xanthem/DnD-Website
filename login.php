@@ -13,21 +13,20 @@ ob_start();
 <div class = "container form-signin">
 
     <?php
-    $msg = '';
+    if (isset($_GET['msg'])) {
+        echo $_GET['msg'];
+    }
+    else {
+        $msg = '';
+    }
 
     if (isset($_POST['login']) && !empty($_POST['username'])
         && !empty($_POST['password'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        #echo "Username: $username<br>";
-        #echo "Password: $password<br>";
-
         $query = "SELECT username, password FROM user_db.login_information WHERE username='$username' AND password='$password'";
         $result = mysqli_query($connect, $query);
-
-        #echo "Query result: $result";
-
 
         if (mysqli_num_rows($result)>=1) {
             $_SESSION['valid'] = true;
@@ -43,7 +42,7 @@ ob_start();
         }
     }
     ?>
-</div> <!-- /container -->
+</div>
 
 <div class = "container" style="text-align:center;">
     <form class = "form-signin" role = "form"
