@@ -11,9 +11,6 @@ ob_start();
 ?>
 
 <html lang = "en">
-<head>
-    <link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css">
-</head>
 
 <body>
 
@@ -61,6 +58,7 @@ ob_start();
         <input type = "username" class = "form-control"
                name = "username" placeholder = "username"
                required autofocus>
+        <br>
         <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required>
         <br>

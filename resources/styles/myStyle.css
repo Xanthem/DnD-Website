@@ -1,6 +1,6 @@
 body {
  padding-bottom: 40px;
- background-color: #ADABAB;
+ background-color: #BBB07F;
 }
 
 .form-signin {
@@ -34,32 +34,43 @@ body {
 
 .form-signin input[type="username"] {
     margin-bottom: 5px;
-    margin-left: -3px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-color:#017572;
 }
 
+.form-signin input[type="email"] {
+    margin-bottom: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: #017572;
+}
+
 .form-signin input[type="password"] {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-color:#017572;
 }
 
-h2{
+h1 {
     text-align: center;
-    color: #017572;
+    color: #2B160F;
 }
 
-h3{
+h2 {
     text-align: center;
-    color: #017572;
+    color: #2B160F;
 }
 
-h4{
+h3 {
     text-align: center;
-    color: #017572;
+    color: #2B160F;
+}
+
+h4 {
+    text-align: center;
+    color: #2B160F;
 }
 
 ul {
@@ -67,7 +78,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
+}
+
+#nav-bar {
+    background-color: black;
 }
 
 li {
@@ -83,7 +98,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #EB1C23;
 }
 
 .active {
