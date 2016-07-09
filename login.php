@@ -9,7 +9,7 @@ ob_start();
 
 <body>
 
-<h2>Enter Username and Password</h2>
+<h1>Enter Username and Password</h1>
 <div class = "container form-signin">
 
     <?php
@@ -18,6 +18,11 @@ ob_start();
     }
     else {
         $msg = '';
+    }
+
+    # Already logged in
+    if (isset($_SESSION['valid']) && $_SESSION['valid'] == true) {
+        header("Location: /account/");
     }
 
     if (isset($_POST['login']) && !empty($_POST['username'])
@@ -50,16 +55,18 @@ ob_start();
           ?>" method = "post">
         <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
         <input type = "username" class = "form-control"
-               name = "username" placeholder = "username"
+               name = "username" placeholder = "Username"
                required autofocus>
         <br>
         <input type = "password" class = "form-control"
-               name = "password" placeholder = "password" required>
+               name = "password" placeholder = "Password" required>
         <br>
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "login">Login</button>
     </form>
-    <h4>New user? <a href="/signup.php">Click here!</a></h4>
+    <h3>New user?<br>
+        <a href="/register.php">Create an Account!</a><br>
+        It's free, so why not?</h3>
 </div>
 
 </body>
