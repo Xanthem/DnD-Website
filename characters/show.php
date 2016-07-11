@@ -12,5 +12,5 @@ $connect->close();
 ?>
 
 <body>
-<h1>Details for <?php echo $row["char_name"]; ?></h1>
+<h1 class="capitalize">Details for <?php echo $row["char_name"]; ?></h1>
 </body>

@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css">
     <link rel="stylesheet" href="../resources/styles/someOtherStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/styles/inputs.css" type="text/css">
 </head>
 
 <body>

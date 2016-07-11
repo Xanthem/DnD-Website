@@ -32,7 +32,7 @@ $connect->close();
     ?>
     <?php while($row = mysqli_fetch_array($result)):;?>
         <tr>
-            <td><?php echo $row["char_name"];?></td>
+            <td class="capitalize"><?php echo $row["char_name"];?></td>
             <td><?php echo $row["char_class"];?></td>
             <td><?php echo $row["char_race"];?></td>
             <td><?php echo $row["char_lvl"];?></td>
