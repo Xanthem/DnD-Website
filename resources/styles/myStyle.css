@@ -62,17 +62,20 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-left: 10px;
+    margin-right: auto;
     color: #2B160F;
 }
 
 h3 {
-    text-align: center;
+    text-align: left;
     color: #2B160F;
 }
 
 h4 {
-    text-align: center;
+    text-align: left;
     color: #2B160F;
 }
 

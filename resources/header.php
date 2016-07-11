@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css">
     <!-- <link rel="stylesheet" href="../resources/styles/background.css" type="text/css"> -->
     <link rel="stylesheet" href="../resources/styles/someOtherStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/styles/inputs.css" type="text/css">
 </head>
 
 <body>
@@ -10,6 +11,7 @@
             <img src="../resources/images/D&D%20Logo%20NEW.png" align="center"/>
         </div>
     </div> -->
+    
 
 
     <ul id="nav-bar">
