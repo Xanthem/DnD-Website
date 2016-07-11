@@ -1,9 +1,17 @@
 <head>
     <link rel="stylesheet" href="../resources/styles/mystyle.css" type="text/css">
+    <!-- <link rel="stylesheet" href="../resources/styles/background.css" type="text/css"> -->
     <link rel="stylesheet" href="../resources/styles/someOtherStyle.css" type="text/css">
 </head>
 
 <body>
+    <!-- <div id="wrapperHeader">
+        <div id="header">
+            <img src="../resources/images/D&D%20Logo%20NEW.png" align="center"/>
+        </div>
+    </div> -->
+
+
     <ul id="nav-bar">
         <a href="http://dnd.wizards.com/"><img src="../resources/images/D&D%20Splat%20Transparent.png" border="0" alt="Image_link" align="left" height="42" width="250"></a>
         <li><a href="/index.php">Home</a></li>
