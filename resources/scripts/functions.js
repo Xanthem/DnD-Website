@@ -8,6 +8,7 @@ var intelligence = 8;
 var strength = 8;
 var wisdom = 8;
 
+
 function add(currentValue, valueToAdd){
     currentValue += valueToAdd;
     document.getElementById('number').innerHTML = currentValue;

@@ -1,0 +1,26 @@
+div#wrapperHeader {
+    width:auto;
+    height:auto; /* height of the background image? */
+    text-align:center;
+}
+
+div#wrapperHeader div#header {
+    width:auto;
+    height:auto;
+    margin: auto;
+}
+
+div#wrapperHeader div#header img {
+    width:30%; /* the width of the logo image */
+    height:10%; /* the height of the logo image */
+    background-size:100% 100%;
+    margin:0 auto;
+}
+
+html {
+    background: url(../images/dungeons_and_dragons_wallpaper_by_xabian.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
