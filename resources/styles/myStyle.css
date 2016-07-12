@@ -115,3 +115,11 @@ li a:hover {
 .capitalize {
     text-transform: capitalize;
 }
+
+.centered {
+    text-align: center;
+}
+
+.showAsButton {
+
+}

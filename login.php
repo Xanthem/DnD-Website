@@ -64,7 +64,7 @@ ob_start();
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "login">Login</button>
     </form>
-    <h3>New user?<br>
+    <h3 class="centered">New user?<br>
         <a href="/register.php">Create an Account!</a><br>
         It's free, so why not?</h3>
 </div>

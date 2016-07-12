@@ -1,6 +1,11 @@
 <?php
 require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 ?>
+<head>
+    <script>
+        include "$_SERVER[DOCUMENT_ROOT]/resources/scripts/functions.js";
+    </script>
+</head>
 
 <body>
 <input placeholder="Name" class="inputs" autofocus />
@@ -30,22 +35,34 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
     <option value="Half-Orc">Half-Orc</option>
     <option value="Human">Human</option>
     <option value="Tiefling">Tiefling</option>
-
 </select>
 <input placeholder="Level" class="inputs" />
 <br>
-<h2 ="left">Statistics</h2>
-<input placeholder="Charisma" class="inputs" />
+
+<h2>Statistics</h2>
+<input name="chaInput" id="chaInput" placeholder="Charisma" class="inputs" />
+<a href="javascript:subtract(charisma, 1)"><button type="button">-</button></a>
+<a href="javascript:add(charisma, 1)"><button type="button">+</button></a>
 <br>
-<input placeholder="Constitution" class="inputs" />
+<input name="conInput" placeholder="Constitution" class="inputs" />
+<a href="javascript:subtract(constitution, 1)"><button type="button">-</button></a>
+<a href="javascript:add(constitution, 1)"><button type="button">+</button></a>
 <br>
-<input placeholder="Dexterity" class="inputs" />
+<input name="dexInput" placeholder="Dexterity" class="inputs" />
+<a href="javascript:subtract(dexterity, 1)"><button type="button">-</button></a>
+<a href="javascript:add(dexterity, 1)"><button type="button">+</button></a>
 <br>
-<input placeholder="Intelligence" class="inputs" />
+<input name="intInput" placeholder="Intelligence" class="inputs" />
+<a href="javascript:subtract(intelligence, 1)"><button type="button">-</button></a>
+<a href="javascript:add(intelligence, 1)"><button type="button">+</button></a>
 <br>
-<input placeholder="Strength" class="inputs" />
+<input name="strInput" placeholder="Strength" class="inputs" />
+<a href="javascript:subtract(strength, 1)"><button type="button">-</button></a>
+<a href="javascript:add(strength, 1)"><button type="button">+</button></a>
 <br>
-<input placeholder="Wisdom" class="inputs" />
+<input name="wisInput" placeholder="Wisdom" class="inputs" />
+<a href="javascript:subtract(wisdom, 1)"><button type="button">-</button></a>
+<a href="javascript:add(wisdom, 1)"><button type="button">+</button></a>
 <br>
 <button type="submit" name="Create">Create Character</button>
 
