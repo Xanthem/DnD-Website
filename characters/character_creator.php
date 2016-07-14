@@ -4,6 +4,7 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <head>
     <script>
         include "$_SERVER[DOCUMENT_ROOT]/resources/scripts/functions.js";
+        var statPoints = 27;
     </script>
 </head>
 
@@ -42,25 +43,53 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <script>
     function operate(val, object){
         if(val == "add"){
-            // Increase stat
-            var val = document.getElementById(object).value;
-            val++;
-            document.getElementById(object).value = val;
+            val = document.getElementById(object).value;
+            var statPoints = parseInt(document.getElementById('statPoints').innerHTML);
 
-            // Decrease total points
-            var statPoints = document.getElementById('statPoints').value;
-            statPoints--;
-            document.getElementById('statPoints').value = statPoints;
+            if (statPoints == 0) {
+                document.getElementById('errMsgBox').innerText = "Not enough stat points.";
+            }
 
-        } else{
-            var val = document.getElementById(object).value;
-            val--;
-            document.getElementById(object).value = val;
+            else if (val >= 18) {
+                document.getElementById('errMsgBox').innerText = "Maximum stat value is 18.";
+            }
+
+            else {
+                document.getElementById('errMsgBox').innerText = "";
+                // Increase stat
+                val++;
+                document.getElementById(object).value = val;
+
+                // Decrease total points
+                statPoints--;
+                document.getElementById('statPoints').innerHTML = statPoints;
+            }
+        }
+
+        else{
+            val = document.getElementById(object).value;
+            statPoints = parseInt(document.getElementById('statPoints').innerHTML);
+
+            if (val <= 8) {
+                document.getElementById('errMsgBox').innerText = "Cannot reduce stats below 8.";
+            }
+
+            else {
+                document.getElementById('errMsgBox').innerText = "";
+                // Decrease stat
+                val--;
+                document.getElementById(object).value = val;
+
+                // Increase total points
+                statPoints++;
+                document.getElementById('statPoints').innerHTML = statPoints;
+            }
         }
     }
 </script>
-
+<div>
 <h2>Stat Points Remaining: <span id="statPoints" class="statPoints">27</span></h2>
+<span id="errMsgBox" style="color:red"></span>
 <div align="center"><label class="statLabels" >Charisma</label></div>
 <input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <input type="button" value="-" onclick="operate('dec', 'chaInput')">
@@ -91,5 +120,6 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <input type="button" value="-" onclick="operate('dec', 'wisInput')">
 <input type="button" value="+" onclick="operate('add', 'wisInput')">
 <br>
+</div>
 <button type="submit" name="Create">Create Character</button>
 </body>
