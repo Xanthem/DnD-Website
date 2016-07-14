@@ -24,8 +24,20 @@ function subtract(currentValue, valueToSubtract){
 };
 
 function getCha() {
-  document.getElementById("chaInput").value = charisma;
+    document.getElementById("chaInput").value = charisma;
 };
+
+function operate(val){
+    if(val == "add"){
+        var val = document.getElementById('count').value;
+        val++;
+        document.getElementById('count').value = val;
+    } else{
+        var val = document.getElementById('count').value;
+        val--;
+        document.getElementById('count').value = val;
+    }
+}
 
 
 
