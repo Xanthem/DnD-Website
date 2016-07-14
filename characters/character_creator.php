@@ -39,28 +39,34 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <input placeholder="Level" class="inputs" />
 <br>
 
-<h2>Statistics</h2>
-<input name="chaInput" id="chaInput" placeholder="Charisma" class="inputs" />
-<a href="javascript:subtract(charisma, 1)"><button type="button">-</button></a>
+<h2>Stat Points Remaining: <span class="statPoints">27</span></h2>
+<div align="center"><label class="statLabels" >Charisma</label></div>
+<input name="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+<a class="sub1" href="javascript:subtract(charisma, 1)"><button type="button">-</button></a>
 <a href="javascript:add(charisma, 1)"><button type="button">+</button></a>
 <br>
-<input name="conInput" placeholder="Constitution" class="inputs" />
+<div align="center"><label class="statLabels" >Constitution</label></div>
+<input name="conInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <a href="javascript:subtract(constitution, 1)"><button type="button">-</button></a>
 <a href="javascript:add(constitution, 1)"><button type="button">+</button></a>
 <br>
-<input name="dexInput" placeholder="Dexterity" class="inputs" />
+<div align="center"><label class="statLabels" >Dexterity</label></div>
+<input name="dexInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <a href="javascript:subtract(dexterity, 1)"><button type="button">-</button></a>
 <a href="javascript:add(dexterity, 1)"><button type="button">+</button></a>
 <br>
-<input name="intInput" placeholder="Intelligence" class="inputs" />
+<div align="center"><label class="statLabels" >Intelligence</label></div>
+<input name="intInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <a href="javascript:subtract(intelligence, 1)"><button type="button">-</button></a>
 <a href="javascript:add(intelligence, 1)"><button type="button">+</button></a>
 <br>
-<input name="strInput" placeholder="Strength" class="inputs" />
+<div align="center"><label class="statLabels" >Strength</label></div>
+<input name="strInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <a href="javascript:subtract(strength, 1)"><button type="button">-</button></a>
 <a href="javascript:add(strength, 1)"><button type="button">+</button></a>
 <br>
-<input name="wisInput" placeholder="Wisdom" class="inputs" />
+<div align="center"><label class="statLabels" >Wisdom</label></div>
+<input name="wisInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <a href="javascript:subtract(wisdom, 1)"><button type="button">-</button></a>
 <a href="javascript:add(wisdom, 1)"><button type="button">+</button></a>
 <br>
