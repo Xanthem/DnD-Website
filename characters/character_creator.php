@@ -89,7 +89,6 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 </script>
 <div>
 <h2>Stat Points Remaining: <span id="statPoints" class="statPoints">27</span></h2>
-<span id="errMsgBox" style="color:red"></span>
 <div align="center"><label class="statLabels" >Charisma</label></div>
 <input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
 <input type="button" value="-" onclick="operate('dec', 'chaInput')">
@@ -120,6 +119,8 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <input type="button" value="-" onclick="operate('dec', 'wisInput')">
 <input type="button" value="+" onclick="operate('add', 'wisInput')">
 <br>
+<span id="errMsgBox" style="color:red"></span>
+
 </div>
 <button type="submit" name="Create">Create Character</button>
 </body>
