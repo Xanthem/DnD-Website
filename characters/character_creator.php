@@ -2,10 +2,7 @@
 require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 ?>
 <head>
-    <script>
-        include "$_SERVER[DOCUMENT_ROOT]/resources/scripts/functions.js";
-        var statPoints = 27;
-    </script>
+    <script src="/resources/scripts/functions.js"></script>
 </head>
 
 <body>
@@ -40,87 +37,46 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
 <input placeholder="Level" class="inputs" />
 <br>
 
-<script>
-    function operate(val, object){
-        if(val == "add"){
-            val = document.getElementById(object).value;
-            var statPoints = parseInt(document.getElementById('statPoints').innerHTML);
-
-            if (statPoints == 0) {
-                document.getElementById('errMsgBox').innerText = "Not enough stat points.";
-            }
-
-            else if (val >= 18) {
-                document.getElementById('errMsgBox').innerText = "Maximum stat value is 18.";
-            }
-
-            else {
-                document.getElementById('errMsgBox').innerText = "";
-                // Increase stat
-                val++;
-                document.getElementById(object).value = val;
-
-                // Decrease total points
-                statPoints--;
-                document.getElementById('statPoints').innerHTML = statPoints;
-            }
-        }
-
-        else{
-            val = document.getElementById(object).value;
-            statPoints = parseInt(document.getElementById('statPoints').innerHTML);
-
-            if (val <= 8) {
-                document.getElementById('errMsgBox').innerText = "Cannot reduce stats below 8.";
-            }
-
-            else {
-                document.getElementById('errMsgBox').innerText = "";
-                // Decrease stat
-                val--;
-                document.getElementById(object).value = val;
-
-                // Increase total points
-                statPoints++;
-                document.getElementById('statPoints').innerHTML = statPoints;
-            }
-        }
-    }
-</script>
 <div>
 <h2>Stat Points Remaining: <span id="statPoints" class="statPoints">27</span></h2>
-<div align="center"><label class="statLabels" >Charisma</label></div>
-<input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'chaInput')">
-<input type="button" value="+" onclick="operate('add', 'chaInput')">
-<br>
-<div align="center"><label class="statLabels" >Constitution</label></div>
-<input name="conInput" id="conInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'conInput')">
-<input type="button" value="+" onclick="operate('add', 'conInput')">
-<br>
-<div align="center"><label class="statLabels" >Dexterity</label></div>
-<input name="dexInput" id="dexInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'dexInput')">
-<input type="button" value="+" onclick="operate('add', 'dexInput')">
-<br>
-<div align="center"><label class="statLabels" >Intelligence</label></div>
-<input name="intInput" id="intInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'intInput')">
-<input type="button" value="+" onclick="operate('add', 'intInput')">
-<br>
-<div align="center"><label class="statLabels" >Strength</label></div>
-<input name="strInput" id="strInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'strInput')">
-<input type="button" value="+" onclick="operate('add', 'strInput')">
-<br>
-<div align="center"><label class="statLabels" >Wisdom</label></div>
-<input name="wisInput" id="wisInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'wisInput')">
-<input type="button" value="+" onclick="operate('add', 'wisInput')">
-<br>
-<span id="errMsgBox" style="color:red"></span>
-
+    <div align="center"><label class="statLabels" >Charisma</label></div>
+    <input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'chaInput')">
+    <input type="button" value="+" onclick="operate('add', 'chaInput')">
+    <input name="chaInput" id="chaMod" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <div align="center"><label class="statLabels" >Constitution</label></div>
+    <input name="conInput" id="conInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'conInput')">
+    <input type="button" value="+" onclick="operate('add', 'conInput')">
+    <input name="chaInput" id="conModt" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <div align="center"><label class="statLabels" >Dexterity</label></div>
+    <input name="dexInput" id="dexInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'dexInput')">
+    <input type="button" value="+" onclick="operate('add', 'dexInput')">
+    <input name="chaInput" id="dexMod" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <div align="center"><label class="statLabels" >Intelligence</label></div>
+    <input name="intInput" id="intInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'intInput')">
+    <input type="button" value="+" onclick="operate('add', 'intInput')">
+    <input name="chaInput" id="intMod" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <div align="center"><label class="statLabels" >Strength</label></div>
+    <input name="strInput" id="strInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'strInput')">
+    <input type="button" value="+" onclick="operate('add', 'strInput')">
+    <input name="chaInput" id="strMod" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <div align="center"><label class="statLabels" >Wisdom</label></div>
+    <input name="wisInput" id="wisInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+    <input type="button" value="-" onclick="operate('dec', 'wisInput')">
+    <input type="button" value="+" onclick="operate('add', 'wisInput')">
+    <input name="chaInput" id="wisMod" class="inputs-stats" value="0" disabled="disabled" width="50" />
+    <br>
+    <span id="errMsgBox" style="color:red"></span>
 </div>
+
 <button type="submit" name="Create">Create Character</button>
 </body>
