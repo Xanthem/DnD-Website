@@ -1,41 +1,46 @@
-var charisma = 8;
-var constitution = 8;
-var dexterity = 8;
-var intelligence = 8;
-var strength = 8;
-var wisdom = 8;
-
-var $jsName = document.querySelector('.name');
-var $jsValue = document.querySelector('.jsValue');
-
-$jsName.addEventListener('input', function(event){
-    $jsValue.innerHTML = $jsName.value;
-}, false);
-
-
-function add(currentValue, valueToAdd){
-    currentValue += valueToAdd;
-    document.getElementById('number').innerHTML = currentValue;
-};
-
-function subtract(currentValue, valueToSubtract){
-    currentValue -= valueToSubtract;
-    document.getElementById('number').innerHTML = currentValue;
-};
-
-function getCha() {
-    document.getElementById("chaInput").value = charisma;
-};
-
-function operate(val){
+function operate(val, object){
     if(val == "add"){
-        var val = document.getElementById('count').value;
-        val++;
-        document.getElementById('count').value = val;
-    } else{
-        var val = document.getElementById('count').value;
-        val--;
-        document.getElementById('count').value = val;
+        val = document.getElementById(object).value;
+        var statPoints = parseInt(document.getElementById('statPoints').innerHTML);
+
+        if ( statPoints == 0){
+            document.getElementById('errMsgBox').innerText = "Not enough stat points.";
+        }
+
+        else if (val >= 18) {
+            document.getElementById('errMsgBox').innerText = "Maximum stat value is 18.";
+        }
+
+        else {
+            document.getElementById('errMsgBox').innerText = "";
+            // Increase stat & update
+            val++;
+            document.getElementById(object).value = val;
+
+            // Decrease total points & update
+            statPoints--;
+            document.getElementById('statPoints').innerHTML = statPoints;
+        }
+    }
+
+    else{
+        val = document.getElementById(object).value;
+        statPoints = parseInt(document.getElementById('statPoints').innerHTML);
+
+        if (val <= 8) {
+            document.getElementById('errMsgBox').innerText = "Cannot reduce stats below 8.";
+        }
+
+        else {
+            document.getElementById('errMsgBox').innerText = "";
+            // Decrease stat &update
+            val--;
+            document.getElementById(object).value = val;
+
+            // Increase total points &update
+            statPoints++;
+            document.getElementById('statPoints').innerHTML = statPoints;
+        }
     }
 }
 
