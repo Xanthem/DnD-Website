@@ -87,40 +87,99 @@ require_once "$_SERVER[DOCUMENT_ROOT]/config/auth_config.php";
         }
     }
 </script>
-<div>
-<h2>Stat Points Remaining: <span id="statPoints" class="statPoints">27</span></h2>
-<div align="center"><label class="statLabels" >Charisma</label></div>
-<input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'chaInput')">
-<input type="button" value="+" onclick="operate('add', 'chaInput')">
-<br>
-<div align="center"><label class="statLabels" >Constitution</label></div>
-<input name="conInput" id="conInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'conInput')">
-<input type="button" value="+" onclick="operate('add', 'conInput')">
-<br>
-<div align="center"><label class="statLabels" >Dexterity</label></div>
-<input name="dexInput" id="dexInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'dexInput')">
-<input type="button" value="+" onclick="operate('add', 'dexInput')">
-<br>
-<div align="center"><label class="statLabels" >Intelligence</label></div>
-<input name="intInput" id="intInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'intInput')">
-<input type="button" value="+" onclick="operate('add', 'intInput')">
-<br>
-<div align="center"><label class="statLabels" >Strength</label></div>
-<input name="strInput" id="strInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'strInput')">
-<input type="button" value="+" onclick="operate('add', 'strInput')">
-<br>
-<div align="center"><label class="statLabels" >Wisdom</label></div>
-<input name="wisInput" id="wisInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
-<input type="button" value="-" onclick="operate('dec', 'wisInput')">
-<input type="button" value="+" onclick="operate('add', 'wisInput')">
-<br>
-<span id="errMsgBox" style="color:red"></span>
 
-</div>
+<table class="table-stats">
+    <thead>
+    <tr>
+        <th>
+            Stat
+        </th>
+        <th>
+            Points Remaining: <span id="statPoints" class="statPoints">27</span>
+        </th>
+        <th>
+            Class Bonus
+        </th>
+        <th>
+            Racial Bonus
+        </th>
+        <th>
+            Total Modifier
+        </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Charisma</td>
+        <td>
+            <input name="chaInput" id="chaInput" class="inputs-stats" value="8" disabled="disabled" width="50">
+            <input type="button" value="-" onclick="operate('dec', 'chaInput')">
+            <input type="button" value="+" onclick="operate('add', 'chaInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    <tr>
+        <td>Constitution</td>
+        <td>
+            <input name="conInput" id="conInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+            <input type="button" value="-" onclick="operate('dec', 'conInput')">
+            <input type="button" value="+" onclick="operate('add', 'conInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    <tr>
+        <td>Dexterity</td>
+        <td>
+            <input name="dexInput" id="dexInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+            <input type="button" value="-" onclick="operate('dec', 'dexInput')">
+            <input type="button" value="+" onclick="operate('add', 'dexInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    <tr>
+        <td>Intelligence</td>
+        <td>
+            <input name="intInput" id="intInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+            <input type="button" value="-" onclick="operate('dec', 'intInput')">
+            <input type="button" value="+" onclick="operate('add', 'intInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td>
+            <input name="strInput" id="strInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+            <input type="button" value="-" onclick="operate('dec', 'strInput')">
+            <input type="button" value="+" onclick="operate('add', 'strInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    <tr>
+        <td>Wisdom</td>
+        <td>
+            <input name="wisInput" id="wisInput" class="inputs-stats" value="8" disabled="disabled" width="50" />
+            <input type="button" value="-" onclick="operate('dec', 'wisInput')">
+            <input type="button" value="+" onclick="operate('add', 'wisInput')">
+        </td>
+        <td><span>+0</span></td>
+        <td><span>+0</span></td>
+        <td><span>-1</span></td>
+    </tr>
+    </tbody>
+</table>
+
+<span id="errMsgBox" style="color:red"></span>
+<br>
 <button type="submit" name="Create">Create Character</button>
 </body>
