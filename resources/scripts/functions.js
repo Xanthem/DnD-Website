@@ -44,5 +44,6 @@ function operate(val, object){
     }
 }
 
+function updateMod(statMod) {
 
-
+}
