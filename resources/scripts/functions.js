@@ -7,8 +7,8 @@ function operate(val, object){
             document.getElementById('errMsgBox').innerText = "Not enough stat points.";
         }
 
-        else if (val >= 18) {
-            document.getElementById('errMsgBox').innerText = "Maximum stat value is 18.";
+        else if (val >= 15) {
+            document.getElementById('errMsgBox').innerText = "Maximum stat value is 15.";
         }
 
         else {
@@ -44,6 +44,14 @@ function operate(val, object){
     }
 }
 
-function updateMod(statMod) {
+function updateMod(statNum, statMod) {
+    mod = Math.floor((document.getElementById(statNum).value - 10) / 2);
 
+    if (mod > 0) {
+        document.getElementById(statMod).innerText = "+" + mod;
+    }
+
+    else {
+        document.getElementById(statMod).innerText = mod;
+    }
 }
