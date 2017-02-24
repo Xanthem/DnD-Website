@@ -1,4 +1,5 @@
-function operate(val, object){
+function operate(val, object, stat){
+    modString = stat + 'Mod';
     if(val == "add"){
         val = document.getElementById(object).value;
         var statPoints = parseInt(document.getElementById('statPoints').innerHTML);
@@ -20,6 +21,8 @@ function operate(val, object){
             // Decrease total points & update
             statPoints--;
             document.getElementById('statPoints').innerHTML = statPoints;
+            document.getElementById(modString).value = Math.floor((val - 10) / 2);
+            console.log(modString + " Incremented");
         }
     }
 
@@ -33,13 +36,15 @@ function operate(val, object){
 
         else {
             document.getElementById('errMsgBox').innerText = "";
-            // Decrease stat &update
+            // Decrease stat & update
             val--;
             document.getElementById(object).value = val;
 
-            // Increase total points &update
+            // Increase total points & update
             statPoints++;
             document.getElementById('statPoints').innerHTML = statPoints;
+            document.getElementById(modString).value = Math.floor((val - 10) / 2);
+            console.log(modString + " Decremented");
         }
     }
 }

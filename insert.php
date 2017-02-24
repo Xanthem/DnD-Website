@@ -16,6 +16,10 @@ VALUES ( '$username', '$password' )";
         $msg = "There was a problem registering the account. \n Please try again.";
     }
 }
+else {
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($connect);
+    $msg = "Must enter a password.";
+}
 
 $connect->close();
 header( "Location: ./login.php?$msg" );

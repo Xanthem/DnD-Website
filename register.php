@@ -7,7 +7,7 @@ $msg = '';
 ?>
 
 <body>
-<h2>Create a New Account</h2>
+<h1>Create a New Account</h1>
 <div class = "container" style="text-align:center;">
     <form class = "form-signin" role = "form"
           action = "insert.php" method = "post">
