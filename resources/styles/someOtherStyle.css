@@ -2,6 +2,10 @@ table{
     width:100%;
     table-layout: fixed;
 }
+
+.table-stats{
+    width:960px;
+}
 .tbl-header{
     background-color: rgba(255,255,255,0.3);
 }
