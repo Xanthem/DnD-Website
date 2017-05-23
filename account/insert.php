@@ -6,21 +6,21 @@ $username = $_GET['username'];
 $password = $_GET['password'];
 #print "Password: " . $password . "\n";
 $userquery = "SELECT username FROM user_db.login_information WHERE username = '$username'";
+print $userquery;
 
 # Null password
 if ($password != NULL) {
     # Username already exists
-    if (mysqli_query($connect, $userquery) != false) {
+        if (mysqli_num_rows(mysqli_query($connect, $userquery)) == 0) {
 
         $sql = "INSERT INTO login_information ( username, password ) VALUES ( '$username', '$password' )";
 
         if (mysqli_query($connect, $sql)) {
             echo "Records added successfully.";
-            $_SESSION["msg"] = "Account Registration Success!\n
-                                Please login.";
+            $_SESSION["msg"] = "Account registration success!<br>Please login.";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($connect);
-            $msg = "There was a problem registering the account. \n Please try again.";
+            $_SESSION["msg"] = "There was a problem registering the account. \n Please try again.";
         }
     } else {
         echo mysqli_error($connect);
