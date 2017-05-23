@@ -22,7 +22,7 @@ function operate(val, object, stat){
             statPoints--;
             document.getElementById('statPoints').innerHTML = statPoints;
             document.getElementById(modString).value = Math.floor((val - 10) / 2);
-            console.log(modString + " Incremented");
+            //console.log(modString + " Incremented");
         }
     }
 
@@ -44,7 +44,7 @@ function operate(val, object, stat){
             statPoints++;
             document.getElementById('statPoints').innerHTML = statPoints;
             document.getElementById(modString).value = Math.floor((val - 10) / 2);
-            console.log(modString + " Decremented");
+            //console.log(modString + " Decremented");
         }
     }
 }

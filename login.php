@@ -13,8 +13,8 @@ ob_start();
 <div class = "container form-signin">
 
     <?php
-    if (isset($_GET['msg'])) {
-        echo $_GET['msg'];
+    if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
     }
     else {
         $msg = '';
@@ -65,7 +65,7 @@ ob_start();
                 name = "login">Login</button>
     </form>
     <h3 class="centered">New user?<br>
-        <a href="/register.php">Create an Account!</a><br>
+        <a href="/account/register.php">Create an Account!</a><br>
         It's free, so why not?</h3>
 </div>
 

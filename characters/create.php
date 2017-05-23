@@ -1,13 +1,13 @@
 <?php
 require_once "$_SERVER[DOCUMENT_ROOT]/config/basic_config.php";
-require_once "$_SERVER[DOCUMENT_ROOT]/config/user_db_connect.php";
+require_once "$_SERVER[DOCUMENT_ROOT]/config/character_db_connect.php";
 
 ob_start();
 $msg = '';
 ?>
 
 <body>
-<h1>Create a New Account</h1>
+<h1>Creating new Character...</h1>
 <div class = "container" style="text-align:center;">
     <form class = "form-signin" role = "form"
           action = "insert.php" method = "post">
@@ -27,6 +27,7 @@ $msg = '';
         <!-- <input type = "password" class = "form-control"
                name = "password_confirm" placeholder = "Confirm Password" required>
         <br> -->
+        <span id="errMsgBox" style="color:red"></span>
         <button class = "btn btn-lg btn-primary btn-block" type = "submit"
                 name = "register">Register Account</button>
     </form>
