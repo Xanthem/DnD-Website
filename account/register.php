@@ -2,7 +2,7 @@
 require_once "$_SERVER[DOCUMENT_ROOT]/config/basic_config.php";
 require_once "$_SERVER[DOCUMENT_ROOT]/config/user_db_connect.php";
 
-ob_start();
+#ob_start();
 $msg = '';
 ?>
 
@@ -28,8 +28,7 @@ $msg = '';
                name = "password_confirm" placeholder = "Confirm Password" required>
         <br> -->
         <span id="errMsgBox" style="color:red"></span>
-        <button class = "btn btn-lg btn-primary btn-block" type = "submit"
-                >Register Account</button>
+        <button class = "btn btn-lg btn-primary btn-block" type = "submit">Register Account</button>
     </form>
 </div>
 </body>

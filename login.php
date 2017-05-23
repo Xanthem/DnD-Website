@@ -2,7 +2,7 @@
 require_once "$_SERVER[DOCUMENT_ROOT]/config/basic_config.php";
 require_once "$_SERVER[DOCUMENT_ROOT]/config/user_db_connect.php";
 
-ob_start();
+#ob_start();
 ?>
 
 <html lang = "en">
@@ -10,16 +10,9 @@ ob_start();
 <body>
 
 <h1>Enter Username and Password</h1>
-<div class = "container form-signin">
+<div class = "container form-signin centered">
 
     <?php
-    if (isset($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-    }
-    else {
-        $msg = '';
-    }
-
     # Already logged in
     if (isset($_SESSION['valid']) && $_SESSION['valid'] == true) {
         header("Location: /account/");
@@ -43,8 +36,14 @@ ob_start();
                 header("Location: ./account/");
 
         }else {
-            $msg = 'Wrong username or password';
+            $_SESSION['msg'] = 'Wrong username or password';
         }
+    }
+
+    if (isset($_SESSION['msg'])) { ?>
+        <h4 class = "form-signin-heading centered"><?php echo $_SESSION['msg']; ?></h4>
+    <?php } else {
+        $_SESSION['msg'] = '';
     }
     ?>
 </div>
@@ -53,7 +52,6 @@ ob_start();
     <form class = "form-signin" role = "form"
           action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
           ?>" method = "post">
-        <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
         <input type = "username" class = "form-control"
                name = "username" placeholder = "Username"
                required autofocus>
@@ -68,6 +66,9 @@ ob_start();
         <a href="/account/register.php">Create an Account!</a><br>
         It's free, so why not?</h3>
 </div>
+<?php
+unset($_SESSION['msg']);
+?>
 
 </body>
 </html>
