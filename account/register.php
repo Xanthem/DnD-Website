@@ -10,7 +10,7 @@ $msg = '';
 <h1>Create a New Account</h1>
 <div class = "container" style="text-align:center;">
     <form class = "form-signin" role = "form"
-          action = "/account/insert.php" method = " ">
+          action = "/account/insert.php" method = "get">
         <h4 class = "form-signup-heading"><?php echo $msg; ?></h4>
         <input type = "username" class = "form-control"
                name = "username" placeholder = "Username"
