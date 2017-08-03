@@ -1,3 +1,4 @@
+// Increment/Decrement values on character creator page
 function operate(val, object, stat){
     modString = stat + 'Mod';
     if(val == "add"){
@@ -49,6 +50,7 @@ function operate(val, object, stat){
     }
 }
 
+// Updates the Modifier on the character creator day
 function updateMod(statNum, statMod) {
     mod = Math.floor((document.getElementById(statNum).value - 10) / 2);
 
@@ -59,4 +61,18 @@ function updateMod(statNum, statMod) {
     else {
         document.getElementById(statMod).innerText = mod;
     }
+}
+
+// Expander for details
+function tableHide() {
+    $("td[colspan=5]").find("p").hide();
+    $("td.expander").click(function (event) {
+        event.stopPropagation();
+        var $target = $(event.target);
+        if ($target.closest("td").attr("colspan") > 1) {
+            $target.slideUp();
+        } else {
+            $target.closest("tr").next().find("p").slideToggle();
+        }
+    });
 }
